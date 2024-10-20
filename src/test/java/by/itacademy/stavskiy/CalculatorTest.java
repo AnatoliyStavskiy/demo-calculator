@@ -70,14 +70,14 @@ public class CalculatorTest {
     @Test
     public void TestDivideZero4(){
         Assertions.assertThrows(ArithmeticException.class, () -> {
-            calculator.divide(0, 0);
+            calculator.divide(2, 0);
         });
     }
 
     @Test
     public void TestDivideDoubleZero5(){
         Assertions.assertThrows(ArithmeticException.class, () -> {
-        calculator.divide(2, 0);
+        calculator.divide(0, 0);
         });
     }
 

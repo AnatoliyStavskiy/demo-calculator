@@ -12,12 +12,14 @@ public class Calculator {
 
     public int divide(int a, int b){
         try {
-            if (a == 0 || b == 0 || (a & b) == 0){
+            if ( b == 0 ){
                 System.out.println("Делить на 0 нельзя");
             }
         } catch (ArithmeticException e) {
-            System.out.println("Делить на 0 нельзя");
+            System.out.println("Деление на 0");
+            throw new RuntimeException(e);
         }
+
         return a / b;
     }
 
